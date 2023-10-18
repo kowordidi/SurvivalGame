@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=W\u00E4chter
+comment1.params=name
+comment1.target=W\u00E4chter(java.lang.String)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ talk()
+comment4.params=
+comment4.target=void\ animation()
+numComments=5

@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Player
+comment1.params=
+comment1.target=Player()
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ movePlayer()
+comment4.params=
+comment4.target=void\ checkEdge()
+comment5.params=name
+comment5.target=int\ getItem(java.lang.String)
+comment6.params=name\ change
+comment6.target=void\ setItem(java.lang.String,\ int)
+numComments=7

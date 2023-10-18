@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=H\u00E4ndler
+comment1.params=img\ item\ value
+comment1.target=H\u00E4ndler(java.lang.String,\ java.lang.String,\ int)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ buyItem()
+comment4.params=
+comment4.target=void\ animation()
+numComments=5

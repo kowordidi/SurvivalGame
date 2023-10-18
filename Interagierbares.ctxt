@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Interagierbares
+comment1.params=image
+comment1.target=Interagierbares(java.lang.String)
+comment2.params=
+comment2.target=Interagierbares()
+comment3.params=
+comment3.target=void\ act()
+comment4.params=
+comment4.target=java.lang.Boolean\ isNear()
+comment5.params=message
+comment5.target=void\ showMessage(java.lang.String)
+numComments=6

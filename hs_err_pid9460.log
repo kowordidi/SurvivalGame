@@ -1,0 +1,266 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_IN_PAGE_ERROR (0xc0000006) at pc=0x7264d0ac, pid=9460, tid=0x00001ea0
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_111-b14) (build 1.8.0_111-b14)
+# Java VM: Java HotSpot(TM) Client VM (25.111-b14 mixed mode windows-x86 )
+# Problematic frame:
+# C  [msvcr100.dll+0x7d0ac]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x156ef800):  JavaThread "JDWP Command Reader" daemon [_thread_in_native, id=7840, stack(0x15d80000,0x15dd0000)
+[error occurred during error reporting (printing current thread), id 0xc0000006]
+
+siginfo: ExceptionCode=0xc0000006, ExceptionInformation=0x00000000 0x68a50e58 0xc00000c4 
+
+Registers:
+EAX=0x68a50e58, EBX=0x68a4ff5e, ECX=0x7ffffffe, EDX=0x72684573
+ESP=0x15dcefa8, EBP=0x15dcf234, ESI=0x00000000, EDI=0x68a50e58
+EIP=0x7264d0ac, EFLAGS=0x00010202
+
+Top of Stack: (sp=0x15dcefa8)
+0x15dcefa8:   72683048 00000000 00000000 00000000
+0x15dcefb8:   156f57d8 00000000 00000007 ffffffd1
+0x15dcefc8:   156f57d8 016c1688 156f57d0 00000001
+0x15dcefd8:   72684ae8 016c1688 156f57d0 68a52a01
+0x15dcefe8:   00000000 00000000 00000000 68a4ff5e
+0x15dceff8:   00000000 00000000 00000000 72683048
+0x15dcf008:   15dcfae8 00000000 00000000 68a50e58
+0x15dcf018:   15dcf290 ffffffff 73000000 00000000 
+
+Instructions: (pc=0x7264d0ac)
+0x7264d08c:   e0 fd ff ff d1 f8 eb 28 85 ff 75 0b a1 4c 62 68
+0x7264d09c:   72 89 85 e0 fd ff ff 8b 85 e0 fd ff ff eb 07 49
+0x7264d0ac:   80 38 00 74 05 40 85 c9 75 f5 2b 85 e0 fd ff ff
+0x7264d0bc:   89 85 d8 fd ff ff 83 bd bc fd ff ff 00 0f 85 b8 
+
+
+Register to memory mapping:
+
+EAX=0x68a50e58 is an unknown value
+EBX=0x68a4ff5e is an unknown value
+ECX=0x7ffffffe is an unknown value
+EDX=0x72684573 is an unknown value
+ESP=0x15dcefa8 is pointing into the stack for thread: 0x156ef800
+EBP=0x15dcf234 is pointing into the stack for thread: 0x156ef800
+ESI=0x00000000 is an unknown value
+EDI=0x68a50e58 is an unknown value
+
+
+Stack: [0x15d80000,0x15dd0000],  sp=0x15dcefa8,  free space=315k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [msvcr100.dll+0x7d0ac]
+C  [msvcr100.dll+0x63f0a]
+C  [jdwp.dll+0xbf12]
+C  [jdwp.dll+0xc6e2]
+C  [jdwp.dll+0x189b4]
+V  [jvm.dll+0x1215f4]
+V  [jvm.dll+0x17df6a]
+V  [jvm.dll+0x1c29c6]
+C  [msvcr100.dll+0x5c556]
+C  [msvcr100.dll+0x5c600]
+C  [KERNEL32.DLL+0x1fa29]
+C  [ntdll.dll+0x67a9e]
+C  [ntdll.dll+0x67a6e]
+C  0x00000000
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x1cb63000 JavaThread "Thread-646" daemon [_thread_blocked, id=7436, stack(0x17570000,0x175c0000)
+[error occurred during error reporting (printing all threads), id 0xc0000006]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ def new generation   total 26240K, used 23319K [0x05200000, 0x06e70000, 0x0a750000)
+  eden space 23360K,  96% used [0x05200000, 0x0680f870, 0x068d0000)
+  from space 2880K,  25% used [0x06ba0000, 0x06c56390, 0x06e70000)
+  to   space 2880K,   0% used [0x068d0000, 0x068d0000, 0x06ba0000)
+ tenured generation   total 58140K, used 34881K [0x0a750000, 0x0e017000, 0x15200000)
+   the space 58140K,  59% used [0x0a750000, 0x0c960778, 0x0c960800, 0x0e017000)
+ Metaspace       used 14271K, capacity 14715K, committed 14848K, reserved 15744K
+
+Card table byte_map: [0x050a0000,0x05130000] byte_map_base: 0x05077000
+
+Polling page: 0x01680000
+
+CodeCache: size=32768Kb used=2531Kb max_used=3181Kb free=30236Kb
+ bounds [0x030a0000, 0x033c8000, 0x050a0000]
+ total_blobs=1364 nmethods=1059 adapters=242
+ compilation: enabled
+
+Compilation events (10 events):
+
+[error occurred during error reporting (printing ring buffers), id 0xc0000006]
+
+Dynamic libraries:
+0x00df0000 - 0x00e23000 	P:\Greenfoot\Greenfoot\jdk\jre\bin\java.exe
+0x76fc0000 - 0x77163000 	C:\Windows\SYSTEM32\ntdll.dll
+0x762c0000 - 0x763b0000 	C:\Windows\System32\KERNEL32.DLL
+0x75f60000 - 0x76174000 	C:\Windows\System32\KERNELBASE.dll
+0x69940000 - 0x699df000 	C:\Windows\SYSTEM32\apphelp.dll
+0x75cb0000 - 0x75d2a000 	C:\Windows\System32\ADVAPI32.dll
+0x75b70000 - 0x75c2f000 	C:\Windows\System32\msvcrt.dll
+0x75c30000 - 0x75ca5000 	C:\Windows\System32\sechost.dll
+0x753a0000 - 0x7545f000 	C:\Windows\System32\RPCRT4.dll
+0x759d0000 - 0x75b70000 	C:\Windows\System32\USER32.dll
+0x76180000 - 0x76198000 	C:\Windows\System32\win32u.dll
+0x761a0000 - 0x761c4000 	C:\Windows\System32\GDI32.dll
+0x755b0000 - 0x7568e000 	C:\Windows\System32\gdi32full.dll
+0x75690000 - 0x7570b000 	C:\Windows\System32\msvcp_win.dll
+0x75d70000 - 0x75e90000 	C:\Windows\System32\ucrtbase.dll
+0x70a20000 - 0x70c30000 	C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_a8625c1886757984\COMCTL32.dll
+0x75370000 - 0x75395000 	C:\Windows\System32\IMM32.DLL
+0x725d0000 - 0x7268f000 	P:\Greenfoot\Greenfoot\jdk\jre\bin\msvcr100.dll
+0x70380000 - 0x7074d000 	P:\Greenfoot\Greenfoot\jdk\jre\bin\client\jvm.dll
+0x74f00000 - 0x74f06000 	C:\Windows\System32\PSAPI.DLL
+0x72690000 - 0x72698000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x75ef0000 - 0x75f53000 	C:\Windows\System32\WS2_32.dll
+0x70c50000 - 0x70c78000 	C:\Windows\SYSTEM32\WINMM.dll
+0x73460000 - 0x73468000 	C:\Windows\SYSTEM32\VERSION.dll
+0x725c0000 - 0x725cc000 	P:\Greenfoot\Greenfoot\jdk\jre\bin\verify.dll
+0x72590000 - 0x725b1000 	P:\Greenfoot\Greenfoot\jdk\jre\bin\java.dll
+0x68a30000 - 0x68a59000 	P:\Greenfoot\Greenfoot\jdk\jre\bin\jdwp.dll
+0x68a20000 - 0x68a27000 	P:\Greenfoot\Greenfoot\jdk\jre\bin\npt.dll
+0x72570000 - 0x72583000 	P:\Greenfoot\Greenfoot\jdk\jre\bin\zip.dll
+0x763c0000 - 0x76976000 	C:\Windows\System32\SHELL32.dll
+0x74640000 - 0x74c4c000 	C:\Windows\SYSTEM32\windows.storage.dll
+0x750e0000 - 0x75361000 	C:\Windows\System32\combase.dll
+0x74290000 - 0x742b5000 	C:\Windows\SYSTEM32\Wldp.dll
+0x76e20000 - 0x76ea7000 	C:\Windows\System32\SHCORE.dll
+0x75710000 - 0x75755000 	C:\Windows\System32\shlwapi.dll
+0x73990000 - 0x739a8000 	C:\Windows\SYSTEM32\profapi.dll
+0x70840000 - 0x70849000 	P:\Greenfoot\Greenfoot\jdk\jre\bin\dt_shmem.dll
+0x699e0000 - 0x69b26000 	P:\Greenfoot\greenfoot\jdk\jre\bin\awt.dll
+0x75760000 - 0x757f6000 	C:\Windows\System32\OLEAUT32.dll
+0x73a90000 - 0x73b04000 	C:\Windows\system32\uxtheme.dll
+0x75460000 - 0x75534000 	C:\Windows\System32\MSCTF.dll
+0x761d0000 - 0x762b3000 	C:\Windows\System32\ole32.dll
+0x73b60000 - 0x73b6f000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x74ea0000 - 0x74eff000 	C:\Windows\System32\bcryptPrimitives.dll
+0x72bc0000 - 0x72bd3000 	C:\Windows\SYSTEM32\CRYPTSP.dll
+0x72b90000 - 0x72bbf000 	C:\Windows\system32\rsaenh.dll
+0x74e80000 - 0x74e99000 	C:\Windows\System32\bcrypt.dll
+0x73fe0000 - 0x74005000 	C:\Windows\SYSTEM32\USERENV.dll
+0x70c30000 - 0x70c46000 	P:\Greenfoot\greenfoot\jdk\jre\bin\net.dll
+0x736d0000 - 0x73722000 	C:\Windows\system32\mswsock.dll
+0x74e40000 - 0x74e72000 	C:\Windows\SYSTEM32\IPHLPAPI.DLL
+0x759c0000 - 0x759c7000 	C:\Windows\System32\NSI.dll
+0x728b0000 - 0x728c4000 	C:\Windows\SYSTEM32\dhcpcsvc6.DLL
+0x72900000 - 0x72916000 	C:\Windows\SYSTEM32\dhcpcsvc.DLL
+0x72f20000 - 0x72fb1000 	C:\Windows\SYSTEM32\DNSAPI.dll
+0x70850000 - 0x7085f000 	P:\Greenfoot\greenfoot\jdk\jre\bin\nio.dll
+0x72430000 - 0x72456000 	C:\Windows\system32\DWMAPI.DLL
+0x72480000 - 0x7256e000 	P:\Greenfoot\greenfoot\jdk\jre\bin\msvcr120.dll
+0x709a0000 - 0x70a11000 	P:\Greenfoot\greenfoot\jdk\jre\bin\msvcp120.dll
+0x72460000 - 0x7247e000 	P:\Greenfoot\greenfoot\jdk\jre\bin\prism_d3d.dll
+0x70000000 - 0x70190000 	C:\Windows\system32\d3d9.dll
+0x70860000 - 0x7099c000 	C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_a79f2cb0e423787c\igdumdim32.dll
+0x6c520000 - 0x6fffc000 	C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_a79f2cb0e423787c\igd9dxva32.dll
+0x769e0000 - 0x76e1c000 	C:\Windows\System32\SETUPAPI.dll
+0x75d30000 - 0x75d6b000 	C:\Windows\System32\cfgmgr32.dll
+0x6c220000 - 0x6c51e000 	C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_a79f2cb0e423787c\igdgmm32.dll
+0x6c1e0000 - 0x6c213000 	P:\Greenfoot\greenfoot\jdk\jre\bin\glass.dll
+0x75910000 - 0x759bf000 	C:\Windows\System32\COMDLG32.dll
+0x72410000 - 0x7242e000 	C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_a79f2cb0e423787c\igdinfo32.dll
+0x69b30000 - 0x6c1de000 	C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_a79f2cb0e423787c\igc32.dll
+0x70350000 - 0x7037c000 	C:\Windows\SYSTEM32\dxcore.dll
+0x69900000 - 0x69939000 	P:\Greenfoot\greenfoot\jdk\jre\bin\fontmanager.dll
+0x69400000 - 0x69432000 	P:\Greenfoot\greenfoot\jdk\jre\bin\t2k.dll
+0x75890000 - 0x7590e000 	C:\Windows\System32\clbcatq.dll
+0x69280000 - 0x693f1000 	C:\Windows\SYSTEM32\WindowsCodecs.dll
+0x69240000 - 0x69271000 	C:\Windows\system32\dataexchange.dll
+0x69060000 - 0x69240000 	C:\Windows\system32\d3d11.dll
+0x68ef0000 - 0x69055000 	C:\Windows\system32\dcomp.dll
+0x68e20000 - 0x68ee3000 	C:\Windows\system32\dxgi.dll
+0x68c90000 - 0x68e1f000 	C:\Windows\system32\twinapi.appcore.dll
+0x69840000 - 0x698f9000 	C:\Windows\SYSTEM32\textinputframework.dll
+0x69520000 - 0x6979e000 	C:\Windows\System32\CoreUIComponents.dll
+0x697a0000 - 0x6983b000 	C:\Windows\System32\CoreMessaging.dll
+0x69440000 - 0x6951b000 	C:\Windows\SYSTEM32\wintypes.dll
+0x74ca0000 - 0x74cc9000 	C:\Windows\SYSTEM32\ntmarta.dll
+0x68a10000 - 0x68a1a000 	P:\Greenfoot\greenfoot\jdk\jre\bin\management.dll
+0x72870000 - 0x72881000 	C:\Windows\system32\napinsp.dll
+0x72850000 - 0x72866000 	C:\Windows\system32\pnrpnsp.dll
+0x72840000 - 0x72850000 	C:\Windows\system32\wshbth.dll
+0x72820000 - 0x72836000 	C:\Windows\system32\NLAapi.dll
+0x72810000 - 0x7281e000 	C:\Windows\System32\winrnr.dll
+0x72e70000 - 0x72e78000 	C:\Windows\System32\rasadhlp.dll
+0x72df0000 - 0x72e48000 	C:\Windows\System32\fwpuclnt.dll
+0x72140000 - 0x72170000 	P:\Greenfoot\greenfoot\jdk\jre\bin\lcms.dll
+0x73730000 - 0x737bd000 	C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.19041.1110_none_c0da534e38c01f4d\comctl32.dll
+0x739b0000 - 0x73a72000 	C:\Windows\system32\propsys.dll
+0x72120000 - 0x72133000 	C:\Windows\system32\NetworkExplorer.dll
+0x73b20000 - 0x73b39000 	C:\Windows\SYSTEM32\MPR.dll
+0x72110000 - 0x72119000 	C:\Windows\System32\drprov.dll
+0x72b40000 - 0x72b87000 	C:\Windows\System32\WINSTA.dll
+0x720f0000 - 0x72109000 	C:\Windows\System32\ntlanman.dll
+0x720d0000 - 0x720e9000 	C:\Windows\System32\davclnt.dll
+0x720c0000 - 0x720ca000 	C:\Windows\System32\DAVHLPR.dll
+0x72ec0000 - 0x72ed0000 	C:\Windows\System32\wkscli.dll
+0x71d60000 - 0x71d6e000 	C:\Windows\SYSTEM32\cscapi.dll
+0x736a0000 - 0x736ab000 	C:\Windows\System32\netutils.dll
+0x736b0000 - 0x736cd000 	C:\Windows\System32\srvcli.dll
+0x72070000 - 0x720b8000 	C:\Windows\System32\thumbcache.dll
+0x71fe0000 - 0x72063000 	C:\Windows\SYSTEM32\policymanager.dll
+0x71f70000 - 0x71fd5000 	C:\Windows\SYSTEM32\msvcp110_win.dll
+0x71f20000 - 0x71f63000 	C:\Windows\System32\dlnashext.dll
+0x71ed0000 - 0x71f19000 	C:\Windows\System32\PlayToDevice.dll
+0x71eb0000 - 0x71ecb000 	C:\Windows\System32\DevDispItemProvider.dll
+0x71dd0000 - 0x71e3b000 	C:\Windows\System32\MMDevApi.dll
+0x728d0000 - 0x728fb000 	C:\Windows\System32\DEVOBJ.dll
+0x71cd0000 - 0x71d5b000 	C:\Windows\system32\wpdshext.dll
+0x71b60000 - 0x71cc9000 	C:\Windows\WinSxS\x86_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.19041.1348_none_d94f9953e1060d01\gdiplus.dll
+0x71ad0000 - 0x71b53000 	C:\Windows\System32\PortableDeviceApi.dll
+0x75560000 - 0x755a7000 	C:\Windows\System32\WINTRUST.dll
+0x76eb0000 - 0x76faa000 	C:\Windows\System32\CRYPT32.dll
+0x73b90000 - 0x73b9e000 	C:\Windows\SYSTEM32\MSASN1.dll
+0x71e70000 - 0x71eb0000 	C:\Windows\system32\audiodev.dll
+0x718c0000 - 0x71acd000 	C:\Windows\system32\WMVCore.DLL
+0x71d90000 - 0x71dcd000 	C:\Windows\system32\WMASF.DLL
+0x688d0000 - 0x689d6000 	C:\Windows\system32\mfperfhelper.dll
+0x71e60000 - 0x71e6b000 	C:\Windows\SYSTEM32\LINKINFO.dll
+0x72f10000 - 0x72f1a000 	C:\Windows\SYSTEM32\Secur32.dll
+0x72dc0000 - 0x72de1000 	C:\Windows\SYSTEM32\SSPICLI.DLL
+
+VM Arguments:
+jvm_args: -Dawt.useSystemAAFontSettings=on -XX:MaxGCPauseMillis=50 -agentlib:jdwp=transport=dt_shmem,address=javadebug -Dfile.encoding=UTF-8 
+java_command: bluej.runtime.ExecServer UTF-8
+java_class_path (initial): P:\Greenfoot\greenfoot\lib\extensions\greenfoot.jar;P:\Greenfoot\greenfoot\lib\bluejcore.jar;P:\Greenfoot\greenfoot\lib\bluejeditor.jar;P:\Greenfoot\greenfoot\lib\bluejext.jar;P:\Greenfoot\greenfoot\lib\AppleJavaExtensions.jar;P:\Greenfoot\greenfoot\lib\junit-4.11.jar;P:\Greenfoot\greenfoot\lib\hamcrest-core-1.3.jar;P:\Greenfoot\greenfoot\lib\bluej.jar;P:\Greenfoot\greenfoot\lib\diffutils-1.2.1.jar;P:\Greenfoot\greenfoot\lib\commons-httpclient-3.1.jar;P:\Greenfoot\greenfoot\lib\commons-logging-api-1.1.2.jar;P:\Greenfoot\greenfoot\lib\commons-codec-1.3.jar;P:\Greenfoot\greenfoot\lib\jl1.0.1.jar;P:\Greenfoot\greenfoot\lib\opencsv-2.3.jar;P:\Greenfoot\greenfoot\lib\xom-1.2.9.jar;P:\Greenfoot\greenfoot\lib\lang-stride.jar;P:\Greenfoot\greenfoot\lib\guava-17.0.jar;P:\Greenfoot\greenfoot\lib\javassist-3.18.0.jar;P:\Greenfoot\greenfoot\lib\commons-vfs2-2.0.jar;P:\Greenfoot\greenfoot\lib\httpclient-4.1.1.jar;P:\Greenfoot\greenfoot\lib\httpcore-4.1.jar;P:\Greenfoot\greenfoot\lib\httpmime-4.1.1.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Windows Live\Shared;C:\Users\moran.oliver\AppData\Local\Microsoft\WindowsApps;
+USERNAME=moran.oliver
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 165 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 19041 (10.0.19041.1348)
+
+CPU:total 8 (4 cores per cpu, 2 threads per core) family 6 model 165 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 8152360k(5212672k free), swap 9463080k(6414108k free)
+
+vm_info: Java HotSpot(TM) Client VM (25.111-b14) for windows-x86 JRE (1.8.0_111-b14), built on Sep 22 2016 18:54:33 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Tue Mar 15 13:45:25 2022
+elapsed time: 7192 seconds (0d 1h 59m 52s)
+
