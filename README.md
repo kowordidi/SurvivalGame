@@ -18,16 +18,16 @@ In this game, you start inside your house and can explore nine unique cells. The
 
 
 Start Screen
-![Game Screenshot](./Screenshot1.PNG)
+![Game Screenshot](./source/images/Screenshot1.PNG)
 
 Wander along path
-![Game Screenshot](./Screenshot2.PNG)
+![Game Screenshot](./source/images/Screenshot2.PNG)
 
 Picking Apples
-![Game Screenshot](./Screenshot3.PNG)
+![Game Screenshot](./source/images/Screenshot3.PNG)
 
 In shop
-![Game Screenshot](./Screenshot4.PNG)
+![Game Screenshot](./source/images/Screenshot4.PNG)
 
 
 ### Notes:
